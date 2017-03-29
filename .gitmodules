@@ -1,0 +1,6 @@
+[submodule "Carthage/Checkouts/realm-cocoa"]
+	path = Carthage/Checkouts/realm-cocoa
+	url = https://github.com/realm/realm-cocoa.git
+[submodule "Carthage/Checkouts/DataKit"]
+	path = Carthage/Checkouts/DataKit
+	url = https://github.com/Guerrix/DataKit.git

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "98B2ACBB32C591735B5C81A39892FEA4059E1464",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "98B2ACBB32C591735B5C81A39892FEA4059E1464" : 9223372036854775807,
+    "5750E0F02EB8548614A319C8E41AF341A9E02132" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "67BE120C-C3B3-4E20-86F1-E2E6B256B94D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "98B2ACBB32C591735B5C81A39892FEA4059E1464" : "Code\/",
+    "5750E0F02EB8548614A319C8E41AF341A9E02132" : "Code\/Carthage\/Checkouts\/DataKit\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ContactApp",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ContactApp.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Guerrix\/DataKit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5750E0F02EB8548614A319C8E41AF341A9E02132"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Guerrix\/ContactsApp",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "98B2ACBB32C591735B5C81A39892FEA4059E1464"
+    }
+  ]
+}
