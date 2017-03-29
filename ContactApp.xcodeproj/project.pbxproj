@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		D80A183C1E8C628F00256A05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80A183B1E8C628F00256A05 /* AppDelegate.swift */; };
-		D80A183E1E8C628F00256A05 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80A183D1E8C628F00256A05 /* FirstViewController.swift */; };
-		D80A18401E8C628F00256A05 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80A183F1E8C628F00256A05 /* SecondViewController.swift */; };
 		D80A18431E8C628F00256A05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D80A18411E8C628F00256A05 /* Main.storyboard */; };
 		D80A18451E8C628F00256A05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D80A18441E8C628F00256A05 /* Assets.xcassets */; };
 		D80A18481E8C628F00256A05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D80A18461E8C628F00256A05 /* LaunchScreen.storyboard */; };
 		D80A18501E8C6F8700256A05 /* DataKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D80A184F1E8C6F8700256A05 /* DataKit.framework */; };
 		D80A18511E8C6F8700256A05 /* DataKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D80A184F1E8C6F8700256A05 /* DataKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D80A18551E8C731700256A05 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80A18541E8C731700256A05 /* BaseTableViewController.swift */; };
+		D80A18591E8C735900256A05 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80A18581E8C735900256A05 /* ContactsTableViewController.swift */; };
+		D80A185B1E8C7A5A00256A05 /* GroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80A185A1E8C7A5A00256A05 /* GroupsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,13 +35,14 @@
 /* Begin PBXFileReference section */
 		D80A18381E8C628F00256A05 /* ContactApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D80A183B1E8C628F00256A05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D80A183D1E8C628F00256A05 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		D80A183F1E8C628F00256A05 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		D80A18421E8C628F00256A05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D80A18441E8C628F00256A05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D80A18471E8C628F00256A05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D80A18491E8C628F00256A05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D80A184F1E8C6F8700256A05 /* DataKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D80A18541E8C731700256A05 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
+		D80A18581E8C735900256A05 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
+		D80A185A1E8C7A5A00256A05 /* GroupsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,9 +77,8 @@
 		D80A183A1E8C628F00256A05 /* ContactApp */ = {
 			isa = PBXGroup;
 			children = (
+				D80A18571E8C732C00256A05 /* ViewControllers */,
 				D80A183B1E8C628F00256A05 /* AppDelegate.swift */,
-				D80A183D1E8C628F00256A05 /* FirstViewController.swift */,
-				D80A183F1E8C628F00256A05 /* SecondViewController.swift */,
 				D80A18411E8C628F00256A05 /* Main.storyboard */,
 				D80A18441E8C628F00256A05 /* Assets.xcassets */,
 				D80A18461E8C628F00256A05 /* LaunchScreen.storyboard */,
@@ -92,6 +93,24 @@
 				D80A184F1E8C6F8700256A05 /* DataKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D80A18561E8C731D00256A05 /* BaseControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D80A18541E8C731700256A05 /* BaseTableViewController.swift */,
+			);
+			name = BaseControllers;
+			sourceTree = "<group>";
+		};
+		D80A18571E8C732C00256A05 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D80A18561E8C731D00256A05 /* BaseControllers */,
+				D80A18581E8C735900256A05 /* ContactsTableViewController.swift */,
+				D80A185A1E8C7A5A00256A05 /* GroupsTableViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,9 +187,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D80A18401E8C628F00256A05 /* SecondViewController.swift in Sources */,
+				D80A185B1E8C7A5A00256A05 /* GroupsTableViewController.swift in Sources */,
+				D80A18551E8C731700256A05 /* BaseTableViewController.swift in Sources */,
 				D80A183C1E8C628F00256A05 /* AppDelegate.swift in Sources */,
-				D80A183E1E8C628F00256A05 /* FirstViewController.swift in Sources */,
+				D80A18591E8C735900256A05 /* ContactsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
