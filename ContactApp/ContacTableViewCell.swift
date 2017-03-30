@@ -10,13 +10,18 @@ import UIKit
 import DataKit
 
 class ContacTableViewCell: BaseTableViewCell {
-
-    @IBOutlet weak var contactAddress: UILabel!
-    @IBOutlet weak var contactName: UILabel!
-
-    func configure(withContact contact: Contact) {
-      contactName.text = contact.fullName
-      contactAddress.text = contact.address
-    }
-
+  
+  @IBOutlet weak var contactAddress: UILabel!
+  @IBOutlet weak var contactName: UILabel!
+  
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    self.accessoryType = .disclosureIndicator
+  }
+  
+  func configure(withContact contact: Contact) {
+    contactName.text = contact.fullName
+    contactAddress.text = contact.address
+  }
+  
 }

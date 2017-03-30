@@ -28,6 +28,17 @@ class ContactsTableViewController: BaseTableViewController {
     notificationToken?.stop()
   }
   
+  // MARK: - Navigation
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == Segue.contactDetail{
+      let contacDetail = segue.destination as! ContactDetailViewController
+      if let contact = sender as? Contact {
+        contacDetail.contact = contact
+      }
+    }
+  }
+
+  
   // MARK: - Private Methods
   private func configureTableView() {
     let contacCellNib = UINib(nibName: ContacTableViewCell.reusableIdentifier(), bundle: nil)
@@ -100,7 +111,13 @@ extension ContactsTableViewController {
       contact.delete()
     }
   }
+}
 
+// MARK: - Table view delegate
+extension ContactsTableViewController {
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    self.performSegue(withIdentifier: Segue.contactDetail, sender: results![indexPath.row])
+  }
 }
 
 
