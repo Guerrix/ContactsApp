@@ -19,16 +19,9 @@ class ContactsTableViewController: BaseTableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.title = "Contacts"
-  
-    configureTableView()
-  
-    // Observe Results Notifications
-    notificationToken = realm.addNotificationBlock { notification, realm in
-      self.updateTable()
-    }
-    
-    self.updateTable()
 
+    configureTableView()
+    addRealmObservers()
   }
   
   deinit {
@@ -41,10 +34,36 @@ class ContactsTableViewController: BaseTableViewController {
     tableView.register(contacCellNib, forCellReuseIdentifier: ContacTableViewCell.reusableIdentifier())
   }
   
-  private func updateTable(){
+  
+  private func addRealmObservers() {
     results = realm.objects(Contact.self)
-    tableView.reloadData()
+    notificationToken = results?.addNotificationBlock { [weak self] (changes: RealmCollectionChange) in
+      guard let tableView = self?.tableView else { return }
+      switch changes {
+      case .initial:
+        // Results are now populated and can be accessed without blocking the UI
+        tableView.reloadData()
+        break
+      case .update(_, let deletions, let insertions, let modifications):
+        // Query results have changed, so apply them to the UITableView
+        tableView.beginUpdates()
+        tableView.insertRows(at: insertions.map({ IndexPath(row: $0, section: 0) }),
+                             with: .top)
+        tableView.deleteRows(at: deletions.map({ IndexPath(row: $0, section: 0)}),
+                             with: .right)
+        tableView.reloadRows(at: modifications.map({ IndexPath(row: $0, section: 0) }),
+                             with: .fade)
+        tableView.endUpdates()
+        break
+      case .error(let error):
+        // An error occurred while opening the Realm file on the background worker thread
+        fatalError("\(error)")
+        break
+      }
+    }
   }
+  
+ 
   
 }
 
