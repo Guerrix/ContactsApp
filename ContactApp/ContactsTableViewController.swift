@@ -19,18 +19,26 @@ class ContactsTableViewController: BaseTableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.title = "Contacts"
-    
-    //Configure tableView
-    let contacCellNib = UINib(nibName: ContacTableViewCell.reusableIdentifier(), bundle: nil)
-    tableView.register(contacCellNib, forCellReuseIdentifier: ContacTableViewCell.reusableIdentifier())
-    tableView.estimatedRowHeight = 44.0
-    tableView.rowHeight = UITableViewAutomaticDimension
-    
+  
+    configureTableView()
   
     // Observe Results Notifications
     notificationToken = realm.addNotificationBlock { notification, realm in
       self.updateTable()
     }
+    
+    self.updateTable()
+
+  }
+  
+  deinit {
+    notificationToken?.stop()
+  }
+  
+  // MARK: - Private Methods
+  private func configureTableView() {
+    let contacCellNib = UINib(nibName: ContacTableViewCell.reusableIdentifier(), bundle: nil)
+    tableView.register(contacCellNib, forCellReuseIdentifier: ContacTableViewCell.reusableIdentifier())
   }
   
   private func updateTable(){
@@ -38,9 +46,6 @@ class ContactsTableViewController: BaseTableViewController {
     tableView.reloadData()
   }
   
-  deinit {
-    notificationToken?.stop()
-  }
 }
 
 // MARK: - Table view data source

@@ -9,9 +9,12 @@
 import UIKit
 
 class BaseTableViewController: UITableViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    tableView.estimatedRowHeight = 44.0
+    tableView.rowHeight = UITableViewAutomaticDimension
+    tableView.tableFooterView = UIView(frame: .zero)
+    
+  }
 }
