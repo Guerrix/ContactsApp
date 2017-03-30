@@ -25,6 +25,8 @@
 		D8A1930D1E8CC9C500C42521 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D8A193091E8CC9C500C42521 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D8A1930F1E8CD0B600C42521 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A1930E1E8CD0B600C42521 /* AddContactViewController.swift */; };
 		D8A193151E8CD7DD00C42521 /* NavigationControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A193141E8CD7DD00C42521 /* NavigationControllerExtention.swift */; };
+		D8A193181E8CE5FA00C42521 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A193171E8CE5FA00C42521 /* Segue.swift */; };
+		D8A1931A1E8CE6F600C42521 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A193191E8CE6F600C42521 /* ContactDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -61,6 +63,8 @@
 		D8A193091E8CC9C500C42521 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		D8A1930E1E8CD0B600C42521 /* AddContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
 		D8A193141E8CD7DD00C42521 /* NavigationControllerExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerExtention.swift; sourceTree = "<group>"; };
+		D8A193171E8CE5FA00C42521 /* Segue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
+		D8A193191E8CE6F600C42521 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +101,7 @@
 		D80A183A1E8C628F00256A05 /* ContactApp */ = {
 			isa = PBXGroup;
 			children = (
-				D8A193131E8CD7A000C42521 /* Extensions */,
+				D8A193161E8CE5DF00C42521 /* Helpers */,
 				D896DCB41E8C942700F238C2 /* Views */,
 				D80A183B1E8C628F00256A05 /* AppDelegate.swift */,
 				D896DCAC1E8C8E6200F238C2 /* Resourses */,
@@ -132,6 +136,7 @@
 				D80A18581E8C735900256A05 /* ContactsTableViewController.swift */,
 				D80A185A1E8C7A5A00256A05 /* GroupsTableViewController.swift */,
 				D8A1930E1E8CD0B600C42521 /* AddContactViewController.swift */,
+				D8A193191E8CE6F600C42521 /* ContactDetailViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -186,6 +191,15 @@
 				D8A193141E8CD7DD00C42521 /* NavigationControllerExtention.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		D8A193161E8CE5DF00C42521 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D8A193131E8CD7A000C42521 /* Extensions */,
+				D8A193171E8CE5FA00C42521 /* Segue.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,7 +283,9 @@
 				D8A1930F1E8CD0B600C42521 /* AddContactViewController.swift in Sources */,
 				D80A183C1E8C628F00256A05 /* AppDelegate.swift in Sources */,
 				D896DCB71E8C945500F238C2 /* BaseTableViewCell.swift in Sources */,
+				D8A1931A1E8CE6F600C42521 /* ContactDetailViewController.swift in Sources */,
 				D80A18591E8C735900256A05 /* ContactsTableViewController.swift in Sources */,
+				D8A193181E8CE5FA00C42521 /* Segue.swift in Sources */,
 				D896DCBB1E8C947E00F238C2 /* ContacTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
