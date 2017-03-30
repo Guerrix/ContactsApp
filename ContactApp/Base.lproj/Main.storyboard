@@ -41,7 +41,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cDc-Ur-pae" id="Hd5-p3-4E9">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -70,7 +70,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZRZ-f8-fIU" id="E5A-jn-mnY">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -80,11 +80,84 @@
                             <outlet property="delegate" destination="uOP-cm-1fA" id="gWX-jn-sQN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Qcr-XZ-M85"/>
+                    <navigationItem key="navigationItem" id="Qcr-XZ-M85">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="jZC-8R-rVr">
+                            <connections>
+                                <segue destination="kcP-nm-fAC" kind="show" id="11T-Ts-aBw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYM-hd-wVI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1704.8" y="-325.18740629685158"/>
+        </scene>
+        <!--Add Contact View Controller-->
+        <scene sceneID="stf-1m-19h">
+            <objects>
+                <viewController id="kcP-nm-fAC" customClass="AddContactViewController" customModule="ContactApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eHd-W1-NYA"/>
+                        <viewControllerLayoutGuide type="bottom" id="rZo-9w-5TG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cfC-c9-6Xu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aAo-Xu-CHr">
+                                <rect key="frame" x="16" y="87" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x37-Ij-05i">
+                                <rect key="frame" x="16" y="125" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" spellCheckingType="no"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z5F-UM-Xlr">
+                                <rect key="frame" x="16" y="163" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VOo-ba-gSv">
+                                <rect key="frame" x="16" y="201" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="aAo-Xu-CHr" secondAttribute="trailing" constant="16" id="57E-Qe-DLW"/>
+                            <constraint firstItem="Z5F-UM-Xlr" firstAttribute="top" secondItem="x37-Ij-05i" secondAttribute="bottom" constant="8" id="CZd-lN-LpD"/>
+                            <constraint firstItem="Z5F-UM-Xlr" firstAttribute="height" secondItem="x37-Ij-05i" secondAttribute="height" id="DA6-X8-hgX"/>
+                            <constraint firstItem="VOo-ba-gSv" firstAttribute="centerX" secondItem="Z5F-UM-Xlr" secondAttribute="centerX" id="DkH-UI-VZZ"/>
+                            <constraint firstItem="Z5F-UM-Xlr" firstAttribute="centerX" secondItem="x37-Ij-05i" secondAttribute="centerX" id="HjV-da-gCG"/>
+                            <constraint firstItem="VOo-ba-gSv" firstAttribute="height" secondItem="Z5F-UM-Xlr" secondAttribute="height" id="LCg-qP-Zde"/>
+                            <constraint firstItem="x37-Ij-05i" firstAttribute="height" secondItem="aAo-Xu-CHr" secondAttribute="height" id="N21-gj-unu"/>
+                            <constraint firstItem="Z5F-UM-Xlr" firstAttribute="width" secondItem="x37-Ij-05i" secondAttribute="width" id="NLy-zL-F9b"/>
+                            <constraint firstItem="VOo-ba-gSv" firstAttribute="width" secondItem="Z5F-UM-Xlr" secondAttribute="width" id="PrY-KU-7Ae"/>
+                            <constraint firstItem="VOo-ba-gSv" firstAttribute="top" secondItem="Z5F-UM-Xlr" secondAttribute="bottom" constant="8" id="bTj-gg-LwA"/>
+                            <constraint firstItem="x37-Ij-05i" firstAttribute="centerX" secondItem="aAo-Xu-CHr" secondAttribute="centerX" id="bcC-L5-ZQ7"/>
+                            <constraint firstItem="aAo-Xu-CHr" firstAttribute="leading" secondItem="cfC-c9-6Xu" secondAttribute="leading" constant="16" id="ijC-RS-Uoo"/>
+                            <constraint firstItem="x37-Ij-05i" firstAttribute="width" secondItem="aAo-Xu-CHr" secondAttribute="width" id="kDz-xw-EEE"/>
+                            <constraint firstItem="aAo-Xu-CHr" firstAttribute="top" secondItem="eHd-W1-NYA" secondAttribute="bottom" constant="23" id="msr-yZ-RBm"/>
+                            <constraint firstItem="x37-Ij-05i" firstAttribute="top" secondItem="aAo-Xu-CHr" secondAttribute="bottom" constant="8" id="z9P-5N-GIy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addressTextField" destination="VOo-ba-gSv" id="7xJ-3n-IXT"/>
+                        <outlet property="ageTextField" destination="Z5F-UM-Xlr" id="2S6-lR-RVV"/>
+                        <outlet property="firstNameTextField" destination="aAo-Xu-CHr" id="ZYy-Mv-Qq8"/>
+                        <outlet property="lastNameTextField" destination="x37-Ij-05i" id="j6p-Iz-hUK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y1Y-aG-gWg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2327" y="-320"/>
         </scene>
         <!--Contacts-->
         <scene sceneID="N7I-0Z-v6n">
