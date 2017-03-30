@@ -16,6 +16,9 @@
 		D80A18551E8C731700256A05 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80A18541E8C731700256A05 /* BaseTableViewController.swift */; };
 		D80A18591E8C735900256A05 /* ContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80A18581E8C735900256A05 /* ContactsTableViewController.swift */; };
 		D80A185B1E8C7A5A00256A05 /* GroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80A185A1E8C7A5A00256A05 /* GroupsTableViewController.swift */; };
+		D896DCB71E8C945500F238C2 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D896DCB61E8C945500F238C2 /* BaseTableViewCell.swift */; };
+		D896DCBB1E8C947E00F238C2 /* ContacTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D896DCB91E8C947E00F238C2 /* ContacTableViewCell.swift */; };
+		D896DCBC1E8C947E00F238C2 /* ContacTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D896DCBA1E8C947E00F238C2 /* ContacTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,6 +46,9 @@
 		D80A18541E8C731700256A05 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewController.swift; sourceTree = "<group>"; };
 		D80A18581E8C735900256A05 /* ContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewController.swift; sourceTree = "<group>"; };
 		D80A185A1E8C7A5A00256A05 /* GroupsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupsTableViewController.swift; sourceTree = "<group>"; };
+		D896DCB61E8C945500F238C2 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		D896DCB91E8C947E00F238C2 /* ContacTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContacTableViewCell.swift; sourceTree = "<group>"; };
+		D896DCBA1E8C947E00F238C2 /* ContacTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContacTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,7 @@
 		D80A183A1E8C628F00256A05 /* ContactApp */ = {
 			isa = PBXGroup;
 			children = (
+				D896DCB41E8C942700F238C2 /* Views */,
 				D80A183B1E8C628F00256A05 /* AppDelegate.swift */,
 				D896DCAC1E8C8E6200F238C2 /* Resourses */,
 				D896DCAD1E8C8E7A00F238C2 /* Storyboards */,
@@ -127,6 +134,32 @@
 				D80A18461E8C628F00256A05 /* LaunchScreen.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		D896DCB41E8C942700F238C2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D896DCB81E8C945900F238C2 /* ContactCell */,
+				D896DCB51E8C943600F238C2 /* BaseViews */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D896DCB51E8C943600F238C2 /* BaseViews */ = {
+			isa = PBXGroup;
+			children = (
+				D896DCB61E8C945500F238C2 /* BaseTableViewCell.swift */,
+			);
+			name = BaseViews;
+			sourceTree = "<group>";
+		};
+		D896DCB81E8C945900F238C2 /* ContactCell */ = {
+			isa = PBXGroup;
+			children = (
+				D896DCB91E8C947E00F238C2 /* ContacTableViewCell.swift */,
+				D896DCBA1E8C947E00F238C2 /* ContacTableViewCell.xib */,
+			);
+			name = ContactCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +226,7 @@
 				D80A18481E8C628F00256A05 /* LaunchScreen.storyboard in Resources */,
 				D80A18451E8C628F00256A05 /* Assets.xcassets in Resources */,
 				D80A18431E8C628F00256A05 /* Main.storyboard in Resources */,
+				D896DCBC1E8C947E00F238C2 /* ContacTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +240,9 @@
 				D80A185B1E8C7A5A00256A05 /* GroupsTableViewController.swift in Sources */,
 				D80A18551E8C731700256A05 /* BaseTableViewController.swift in Sources */,
 				D80A183C1E8C628F00256A05 /* AppDelegate.swift in Sources */,
+				D896DCB71E8C945500F238C2 /* BaseTableViewCell.swift in Sources */,
 				D80A18591E8C735900256A05 /* ContactsTableViewController.swift in Sources */,
+				D896DCBB1E8C947E00F238C2 /* ContacTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +364,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 742AQUF628;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = ContactApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ContactApp;
@@ -341,6 +378,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 742AQUF628;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build/iOS";
 				INFOPLIST_FILE = ContactApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ContactApp;
