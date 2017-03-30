@@ -47,7 +47,7 @@ class ContactsTableViewController: BaseTableViewController {
   
   
   private func addRealmObservers() {
-    results = realm.objects(Contact.self)
+    results = Contact.getAllContacts()
     notificationToken = results?.addNotificationBlock { [weak self] (changes: RealmCollectionChange) in
       guard let tableView = self?.tableView else { return }
       switch changes {
