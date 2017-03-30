@@ -15,7 +15,8 @@ class ContacTableViewCell: BaseTableViewCell {
     @IBOutlet weak var contactName: UILabel!
 
     func configure(withContact contact: Contact) {
-
+      contactName.text = contact.fullName
+      contactAddress.text = contact.address
     }
 
 }

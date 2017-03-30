@@ -19,6 +19,10 @@
 		D896DCB71E8C945500F238C2 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D896DCB61E8C945500F238C2 /* BaseTableViewCell.swift */; };
 		D896DCBB1E8C947E00F238C2 /* ContacTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D896DCB91E8C947E00F238C2 /* ContacTableViewCell.swift */; };
 		D896DCBC1E8C947E00F238C2 /* ContacTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D896DCBA1E8C947E00F238C2 /* ContacTableViewCell.xib */; };
+		D8A1930A1E8CC9C500C42521 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A193081E8CC9C500C42521 /* Realm.framework */; };
+		D8A1930B1E8CC9C500C42521 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D8A193081E8CC9C500C42521 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D8A1930C1E8CC9C500C42521 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8A193091E8CC9C500C42521 /* RealmSwift.framework */; };
+		D8A1930D1E8CC9C500C42521 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D8A193091E8CC9C500C42521 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,7 +32,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				D8A1930B1E8CC9C500C42521 /* Realm.framework in Embed Frameworks */,
 				D80A18511E8C6F8700256A05 /* DataKit.framework in Embed Frameworks */,
+				D8A1930D1E8CC9C500C42521 /* RealmSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -49,6 +55,8 @@
 		D896DCB61E8C945500F238C2 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		D896DCB91E8C947E00F238C2 /* ContacTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContacTableViewCell.swift; sourceTree = "<group>"; };
 		D896DCBA1E8C947E00F238C2 /* ContacTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContacTableViewCell.xib; sourceTree = "<group>"; };
+		D8A193081E8CC9C500C42521 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		D8A193091E8CC9C500C42521 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +64,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8A1930A1E8CC9C500C42521 /* Realm.framework in Frameworks */,
 				D80A18501E8C6F8700256A05 /* DataKit.framework in Frameworks */,
+				D8A1930C1E8CC9C500C42521 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +105,8 @@
 		D80A18531E8C6F9D00256A05 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D8A193081E8CC9C500C42521 /* Realm.framework */,
+				D8A193091E8CC9C500C42521 /* RealmSwift.framework */,
 				D80A184F1E8C6F8700256A05 /* DataKit.framework */,
 			);
 			name = Frameworks;
