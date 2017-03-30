@@ -88,4 +88,20 @@ extension ContactsTableViewController {
   }
 }
 
+// MARK: - Table view Edit
+extension ContactsTableViewController {
+  override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    return true
+  }
+  
+  override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    if (editingStyle == UITableViewCellEditingStyle.delete) {
+      let contact = results![indexPath.row]
+      contact.delete()
+    }
+  }
+
+}
+
+
 
