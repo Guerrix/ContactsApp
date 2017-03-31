@@ -17,13 +17,13 @@ class GroupsTableViewController: BaseTableViewController {
         configureTableView()
         addRealmObservers()
     }
-    
+
     // MARK: - Private Methods
     private func configureTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: String(describing: UITableViewCell.self))
     }
-    
-    
+
+
     private func addRealmObservers() {
         results = Group.getAll()
         notificationToken = results?.addNotificationBlock { [weak self] (changes: RealmCollectionChange) in
@@ -38,7 +38,7 @@ class GroupsTableViewController: BaseTableViewController {
                 tableView.beginUpdates()
                 tableView.insertRows(at: insertions.map({ IndexPath(row: $0, section: 0) }),
                                      with: .top)
-                tableView.deleteRows(at: deletions.map({ IndexPath(row: $0, section: 0)}),
+                tableView.deleteRows(at: deletions.map({ IndexPath(row: $0, section: 0) }),
                                      with: .right)
                 tableView.reloadRows(at: modifications.map({ IndexPath(row: $0, section: 0) }),
                                      with: .fade)
@@ -51,9 +51,9 @@ class GroupsTableViewController: BaseTableViewController {
             }
         }
     }
-    
-    
-    
+
+
+
 }
 
 // MARK: - Table view data source
@@ -61,18 +61,19 @@ extension GroupsTableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let results = self.results {
             return results.count
         }
         return 0
     }
-    
+
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: UITableViewCell.self), for: indexPath)
+        let cell: UITableViewCell = UITableViewCell(style: .subtitle, reuseIdentifier: String(describing: UITableViewCell.self))
         let group = results![indexPath.row]
-        cell.textLabel?.text =  group.name
+        cell.textLabel?.text = group.name
+        cell.detailTextLabel?.text = "\(group.contacts.count) Contact".appending(group.contacts.count == 1 ? "" : "s")
         return cell
 
     }
@@ -83,7 +84,7 @@ extension GroupsTableViewController {
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
-    
+
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.delete) {
             let group = results![indexPath.row]
