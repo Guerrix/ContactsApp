@@ -148,35 +148,75 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdF-gh-RpP">
-                                <rect key="frame" x="16" y="72" width="343" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dasdasd" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IdF-gh-RpP">
+                                <rect key="frame" x="16" y="72" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGn-Hu-lSh">
-                                <rect key="frame" x="16" y="80" width="343" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asdasd" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGn-Hu-lSh">
+                                <rect key="frame" x="16" y="100.5" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tc6-eQ-Ark">
-                                <rect key="frame" x="16" y="88" width="343" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asdasd" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tc6-eQ-Ark">
+                                <rect key="frame" x="16" y="129" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2U5-zR-dag">
+                                <rect key="frame" x="16" y="168" width="343" height="106"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Member of:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLc-Y6-dd6">
+                                        <rect key="frame" x="8" y="8" width="74.5" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fsy-KI-hb0">
+                                        <rect key="frame" x="8" y="33" width="327" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYy-Vu-9wP">
+                                        <rect key="frame" x="194" y="76" width="141" height="30"/>
+                                        <state key="normal" title="Remove From Group">
+                                            <color key="titleColor" red="1" green="0.3523812603" blue="0.30729145920000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="removeFromGroup:" destination="gDn-gZ-6T4" eventType="touchUpInside" id="uhu-GD-K2B"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="GLc-Y6-dd6" firstAttribute="top" secondItem="2U5-zR-dag" secondAttribute="top" constant="8" id="3bb-Id-oz5"/>
+                                    <constraint firstItem="fsy-KI-hb0" firstAttribute="leading" secondItem="2U5-zR-dag" secondAttribute="leading" constant="8" id="7CL-eb-gMl"/>
+                                    <constraint firstAttribute="trailing" secondItem="fsy-KI-hb0" secondAttribute="trailing" constant="8" id="Gcm-yS-8wI"/>
+                                    <constraint firstItem="fsy-KI-hb0" firstAttribute="top" secondItem="GLc-Y6-dd6" secondAttribute="bottom" constant="8" id="Vkk-Fq-GcU"/>
+                                    <constraint firstAttribute="trailing" secondItem="iYy-Vu-9wP" secondAttribute="trailing" constant="8" id="evR-sh-wWF"/>
+                                    <constraint firstAttribute="bottom" secondItem="iYy-Vu-9wP" secondAttribute="bottom" id="gj8-tz-2MO"/>
+                                    <constraint firstAttribute="height" constant="106" id="kII-9O-pe8"/>
+                                    <constraint firstItem="GLc-Y6-dd6" firstAttribute="leading" secondItem="2U5-zR-dag" secondAttribute="leading" constant="8" id="lIs-z0-lqn"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="IdF-gh-RpP" firstAttribute="leading" secondItem="oir-ly-qM4" secondAttribute="leading" constant="16" id="6Dt-UT-dFe"/>
                             <constraint firstItem="Tc6-eQ-Ark" firstAttribute="leading" secondItem="oir-ly-qM4" secondAttribute="leading" constant="16" id="Izb-aL-kxE"/>
+                            <constraint firstAttribute="trailing" secondItem="2U5-zR-dag" secondAttribute="trailing" constant="16" id="Vxa-a6-aRB"/>
                             <constraint firstAttribute="trailing" secondItem="IdF-gh-RpP" secondAttribute="trailing" constant="16" id="Xq8-qx-XAd"/>
                             <constraint firstAttribute="trailing" secondItem="Tc6-eQ-Ark" secondAttribute="trailing" constant="16" id="aDr-aP-Bue"/>
                             <constraint firstItem="IdF-gh-RpP" firstAttribute="top" secondItem="9o4-Bu-3Lv" secondAttribute="bottom" constant="8" id="diF-UB-vCE"/>
                             <constraint firstItem="HGn-Hu-lSh" firstAttribute="top" secondItem="IdF-gh-RpP" secondAttribute="bottom" constant="8" id="h6F-du-oK0"/>
                             <constraint firstAttribute="trailing" secondItem="HGn-Hu-lSh" secondAttribute="trailing" constant="16" id="iOy-sX-V8f"/>
                             <constraint firstItem="Tc6-eQ-Ark" firstAttribute="top" secondItem="HGn-Hu-lSh" secondAttribute="bottom" constant="8" id="jqg-4F-CB7"/>
+                            <constraint firstItem="2U5-zR-dag" firstAttribute="leading" secondItem="oir-ly-qM4" secondAttribute="leading" constant="16" id="lRl-nj-qAv"/>
+                            <constraint firstItem="2U5-zR-dag" firstAttribute="top" secondItem="Tc6-eQ-Ark" secondAttribute="bottom" constant="18.5" id="ngZ-c7-MNh"/>
                             <constraint firstItem="HGn-Hu-lSh" firstAttribute="leading" secondItem="oir-ly-qM4" secondAttribute="leading" constant="16" id="sti-3V-cBf"/>
                         </constraints>
                     </view>
@@ -184,6 +224,8 @@
                         <outlet property="addressLabel" destination="Tc6-eQ-Ark" id="kMb-5d-Vaj"/>
                         <outlet property="ageLabel" destination="HGn-Hu-lSh" id="bnb-B6-856"/>
                         <outlet property="fullNameLabel" destination="IdF-gh-RpP" id="3f0-lR-FQL"/>
+                        <outlet property="groupInfoView" destination="2U5-zR-dag" id="39u-Tp-Eif"/>
+                        <outlet property="groupName" destination="fsy-KI-hb0" id="nYy-RZ-JH7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zbt-Pc-b56" userLabel="First Responder" sceneMemberID="firstResponder"/>
