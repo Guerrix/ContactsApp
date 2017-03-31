@@ -28,6 +28,7 @@
 		D8A193181E8CE5FA00C42521 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A193171E8CE5FA00C42521 /* Segue.swift */; };
 		D8A1931A1E8CE6F600C42521 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A193191E8CE6F600C42521 /* ContactDetailViewController.swift */; };
 		D8FB9BDE1E8DBD4300A1B2FA /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB9BDD1E8DBD4300A1B2FA /* CreateGroupViewController.swift */; };
+		D8FB9BE21E8DF86300A1B2FA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB9BE11E8DF86300A1B2FA /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -67,6 +68,7 @@
 		D8A193171E8CE5FA00C42521 /* Segue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
 		D8A193191E8CE6F600C42521 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
 		D8FB9BDD1E8DBD4300A1B2FA /* CreateGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
+		D8FB9BE11E8DF86300A1B2FA /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				D80A18541E8C731700256A05 /* BaseTableViewController.swift */,
+				D8FB9BE11E8DF86300A1B2FA /* BaseViewController.swift */,
 			);
 			name = BaseControllers;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				D80A18551E8C731700256A05 /* BaseTableViewController.swift in Sources */,
 				D8A1930F1E8CD0B600C42521 /* AddContactViewController.swift in Sources */,
 				D80A183C1E8C628F00256A05 /* AppDelegate.swift in Sources */,
+				D8FB9BE21E8DF86300A1B2FA /* BaseViewController.swift in Sources */,
 				D896DCB71E8C945500F238C2 /* BaseTableViewCell.swift in Sources */,
 				D8A1931A1E8CE6F600C42521 /* ContactDetailViewController.swift in Sources */,
 				D80A18591E8C735900256A05 /* ContactsTableViewController.swift in Sources */,
