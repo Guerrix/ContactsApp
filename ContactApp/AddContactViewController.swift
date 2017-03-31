@@ -28,7 +28,6 @@ class AddContactViewController: UIViewController {
     
     if allFieldsValid() {
       let newContact = Contact()
-      newContact.id = Int(NSDate().timeIntervalSince1970) // Generate id from TimeStam
       newContact.firstName = firstNameTextField.text!
       newContact.lastName = lastNameTextField.text!
       if let age = Int(ageTextField.text!) {

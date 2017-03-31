@@ -11,8 +11,6 @@ import DataKit
 import RealmSwift
 
 class ContactsTableViewController: BaseTableViewController {
-  private let realm = try! Realm()
-  private var notificationToken: NotificationToken?
   
   fileprivate var results: Results<Contact>?
   
@@ -24,10 +22,7 @@ class ContactsTableViewController: BaseTableViewController {
     addRealmObservers()
   }
   
-  deinit {
-    notificationToken?.stop()
-  }
-  
+
   // MARK: - Navigation
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == Segue.contactDetail{
@@ -47,7 +42,7 @@ class ContactsTableViewController: BaseTableViewController {
   
   
   private func addRealmObservers() {
-    results = Contact.getAllContacts()
+    results = Contact.getAll()
     notificationToken = results?.addNotificationBlock { [weak self] (changes: RealmCollectionChange) in
       guard let tableView = self?.tableView else { return }
       switch changes {
