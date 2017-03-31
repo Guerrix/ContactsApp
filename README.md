@@ -20,8 +20,10 @@ That is based in this [Branching Structure Model](http://nvie.com/posts/a-succes
 
  2. Then open terminal :
 
- `git clone git@github.com:Guerrix/ContactsApp.git`
+    `git clone --recursive git@github.com:Guerrix/ContactsApp.git`
 
- `carthage update --platform iOS --use-submodules`
+    `cd ContactsApp `
+
+    `carthage bootstrap --platform iOS --no-use-binaries`
 
  3. Open ContactsApp workspace.
