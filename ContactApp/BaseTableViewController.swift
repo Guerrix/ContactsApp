@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import DataKit
 import RealmSwift
 
 class BaseTableViewController: UITableViewController {
-   let realm = try! Realm()
+   let realm = RealmManager.realm
    var notificationToken: NotificationToken?
   
   override func viewDidLoad() {
