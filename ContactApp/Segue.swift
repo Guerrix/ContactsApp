@@ -9,5 +9,9 @@
 import Foundation
 
 struct Segue {
-  static let contactDetail = "contactDetail"
+    //ContactsTableViewController
+    static let contactDetail = "contactDetail"
+    
+    //GroupsTableViewController
+    static let groupDetail = "groupDetail"
 }

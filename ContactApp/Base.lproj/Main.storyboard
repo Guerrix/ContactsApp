@@ -48,6 +48,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="uOP-cm-1fA" kind="show" identifier="groupDetail" id="Oaz-Ef-nsg"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8h4-5i-OVO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -342,4 +345,7 @@
         <image name="contactsTabIcon" width="25" height="25"/>
         <image name="groupsTabIcon" width="25" height="25"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Oaz-Ef-nsg"/>
+    </inferredMetricsTieBreakers>
 </document>

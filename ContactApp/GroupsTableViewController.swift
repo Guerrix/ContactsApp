@@ -12,6 +12,7 @@ import RealmSwift
 
 class GroupsTableViewController: BaseTableViewController {
     fileprivate var results: Results<Group>?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
@@ -52,7 +53,15 @@ class GroupsTableViewController: BaseTableViewController {
         }
     }
 
-
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Segue.groupDetail{
+            let contactsList = segue.destination as! ContactsTableViewController
+            if let group = sender as? Group {
+                contactsList.group = group
+            }
+        }
+    }
 
 }
 
@@ -74,6 +83,7 @@ extension GroupsTableViewController {
         let group = results![indexPath.row]
         cell.textLabel?.text = group.name
         cell.detailTextLabel?.text = "\(group.contacts.count) Contact".appending(group.contacts.count == 1 ? "" : "s")
+        cell.accessoryType = .disclosureIndicator
         return cell
 
     }
@@ -90,5 +100,12 @@ extension GroupsTableViewController {
             let group = results![indexPath.row]
             group.delete()
         }
+    }
+}
+
+// MARK: - Table view delegate
+extension GroupsTableViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: Segue.groupDetail, sender: results![indexPath.row])
     }
 }
