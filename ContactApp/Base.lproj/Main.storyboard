@@ -41,11 +41,72 @@
                             <outlet property="delegate" destination="dHY-nR-QhG" id="Kbi-QT-6v7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="eZu-Pi-pl3"/>
+                    <navigationItem key="navigationItem" id="eZu-Pi-pl3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="LbS-m2-ttg">
+                            <connections>
+                                <segue destination="HhD-fp-Wlh" kind="show" id="70g-GV-CKK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8h4-5i-OVO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1744.8" y="454.72263868065971"/>
+        </scene>
+        <!--Create Group View Controller-->
+        <scene sceneID="lsg-B0-WlG">
+            <objects>
+                <viewController id="HhD-fp-Wlh" customClass="CreateGroupViewController" customModule="ContactApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FFS-xS-hau"/>
+                        <viewControllerLayoutGuide type="bottom" id="rgE-aU-1Rw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oV3-NZ-Rlq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Group Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GEe-8Q-AxX">
+                                <rect key="frame" x="16" y="94" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nu8-4I-T82">
+                                <rect key="frame" x="0.0" y="193" width="375" height="425"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="HhD-fp-Wlh" id="DFS-BB-ETf"/>
+                                    <outlet property="delegate" destination="HhD-fp-Wlh" id="cmG-cW-RUl"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Group Members:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="297-jl-0eB">
+                                <rect key="frame" x="16" y="169" width="143" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="nu8-4I-T82" secondAttribute="trailing" id="9B4-Dn-HTG"/>
+                            <constraint firstItem="297-jl-0eB" firstAttribute="top" secondItem="GEe-8Q-AxX" secondAttribute="bottom" constant="45" id="9Qx-Mu-YwC"/>
+                            <constraint firstItem="GEe-8Q-AxX" firstAttribute="top" secondItem="FFS-xS-hau" secondAttribute="bottom" constant="30" id="FWL-bJ-nip"/>
+                            <constraint firstItem="GEe-8Q-AxX" firstAttribute="leading" secondItem="oV3-NZ-Rlq" secondAttribute="leading" constant="16" id="dKV-OG-R6S"/>
+                            <constraint firstItem="rgE-aU-1Rw" firstAttribute="top" secondItem="nu8-4I-T82" secondAttribute="bottom" id="gOT-tH-TAk"/>
+                            <constraint firstItem="nu8-4I-T82" firstAttribute="leading" secondItem="oV3-NZ-Rlq" secondAttribute="leading" id="hru-aS-al2"/>
+                            <constraint firstItem="297-jl-0eB" firstAttribute="leading" secondItem="oV3-NZ-Rlq" secondAttribute="leading" constant="16" id="lV3-Jb-a6U"/>
+                            <constraint firstAttribute="trailing" secondItem="GEe-8Q-AxX" secondAttribute="trailing" constant="16" id="sTI-Ie-fCK"/>
+                            <constraint firstItem="nu8-4I-T82" firstAttribute="top" secondItem="297-jl-0eB" secondAttribute="bottom" constant="8" id="tXD-5X-HW7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contactsTableView" destination="nu8-4I-T82" id="ojg-wq-wVX"/>
+                        <outlet property="nameTextField" destination="GEe-8Q-AxX" id="b18-FD-KUG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tHv-1C-Kmc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2765.5999999999999" y="391.75412293853077"/>
         </scene>
         <!--Contacts Table View Controller-->
         <scene sceneID="RQY-M0-VM4">

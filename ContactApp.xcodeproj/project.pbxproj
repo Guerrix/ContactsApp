@@ -27,6 +27,7 @@
 		D8A193151E8CD7DD00C42521 /* NavigationControllerExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A193141E8CD7DD00C42521 /* NavigationControllerExtention.swift */; };
 		D8A193181E8CE5FA00C42521 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A193171E8CE5FA00C42521 /* Segue.swift */; };
 		D8A1931A1E8CE6F600C42521 /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8A193191E8CE6F600C42521 /* ContactDetailViewController.swift */; };
+		D8FB9BDE1E8DBD4300A1B2FA /* CreateGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB9BDD1E8DBD4300A1B2FA /* CreateGroupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -65,6 +66,7 @@
 		D8A193141E8CD7DD00C42521 /* NavigationControllerExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerExtention.swift; sourceTree = "<group>"; };
 		D8A193171E8CE5FA00C42521 /* Segue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
 		D8A193191E8CE6F600C42521 /* ContactDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
+		D8FB9BDD1E8DBD4300A1B2FA /* CreateGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateGroupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,10 +135,9 @@
 			isa = PBXGroup;
 			children = (
 				D80A18561E8C731D00256A05 /* BaseControllers */,
-				D80A18581E8C735900256A05 /* ContactsTableViewController.swift */,
+				D8FED1281E8DB8F400F9D549 /* Contacts */,
 				D80A185A1E8C7A5A00256A05 /* GroupsTableViewController.swift */,
-				D8A1930E1E8CD0B600C42521 /* AddContactViewController.swift */,
-				D8A193191E8CE6F600C42521 /* ContactDetailViewController.swift */,
+				D8FB9BDD1E8DBD4300A1B2FA /* CreateGroupViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -200,6 +201,16 @@
 				D8A193171E8CE5FA00C42521 /* Segue.swift */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		D8FED1281E8DB8F400F9D549 /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				D80A18581E8C735900256A05 /* ContactsTableViewController.swift */,
+				D8A1930E1E8CD0B600C42521 /* AddContactViewController.swift */,
+				D8A193191E8CE6F600C42521 /* ContactDetailViewController.swift */,
+			);
+			name = Contacts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,6 +296,7 @@
 				D896DCB71E8C945500F238C2 /* BaseTableViewCell.swift in Sources */,
 				D8A1931A1E8CE6F600C42521 /* ContactDetailViewController.swift in Sources */,
 				D80A18591E8C735900256A05 /* ContactsTableViewController.swift in Sources */,
+				D8FB9BDE1E8DBD4300A1B2FA /* CreateGroupViewController.swift in Sources */,
 				D8A193181E8CE5FA00C42521 /* Segue.swift in Sources */,
 				D896DCBB1E8C947E00F238C2 /* ContacTableViewCell.swift in Sources */,
 			);
