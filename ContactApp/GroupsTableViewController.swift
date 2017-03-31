@@ -12,7 +12,7 @@ import RealmSwift
 
 class GroupsTableViewController: BaseTableViewController {
     fileprivate var results: Results<Group>?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
@@ -55,7 +55,7 @@ class GroupsTableViewController: BaseTableViewController {
 
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == Segue.groupDetail{
+        if segue.identifier == Segue.groupDetail {
             let contactsList = segue.destination as! ContactsTableViewController
             if let group = sender as? Group {
                 contactsList.group = group
